@@ -1,0 +1,32 @@
+<div class="marginOnSides">
+    <div>
+        <h1 class="title">
+            Projects
+        </h1>
+    </div>
+    <div class="container">
+        <div class="columns projectPosition">
+            {{#if projectposts.length}}
+            {{#each projectposts}}
+            <div class="column col-8 projectCardBackground">
+                <div>
+                    <h4 class="cardTitle title">
+                        {{title}}
+                    </h4>
+                </div>
+                <div>
+                    {{description}}
+                </div>
+                <div>
+                    <a href="/projects-page/project-post/{{id}}" class="btn btn-primary round-corners">Check out this Project</a>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <div>
+                There is no posts yet
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

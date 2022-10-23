@@ -1,0 +1,19 @@
+<div class="marginOnSides">
+    {{#if validationErrors.length}}
+    {{#each validationErrors}}
+        <p class="error-text">{{this}}</p>
+    {{/each}}
+    {{/if}}
+    <form action="/blogs-page/blog-post/{{blogID}}/comment" method="post">
+        <textarea name="comment" cols="30" rows="3"></textarea>
+        <input type="date" name="date" value="{{date}}" hidden>
+        <div>
+            Date: {{date}}
+        </div>
+        <input type="submit", value="comment" class="btn btn-primary round-corners button-margin">
+    </form>
+    
+    <form action="/blogs-page/blog-post/{{blogID}}" method="get">
+        <input type="submit" value="Back" class="btn btn-primary round-corners button-margin">
+    </form>
+</div>

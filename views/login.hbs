@@ -1,0 +1,46 @@
+<div class="marginOnSides">
+    <div>
+        {{#if session.isLoggedIn}}
+            <h1 class="title">
+                Logout
+            </h1>
+        {{else}}
+            <h1 class="title">
+                Login
+            </h1>
+        {{/if}}
+    </div>
+    <div class="loginBorder">
+        {{#if session.isLoggedIn}}
+            <p>
+                You are already logged in
+            </p>
+            <form action="/logout" method="get">
+                <input type="submit" value="Logout">
+            </form>
+        {{else}}
+            {{#if loginFailed}}
+                <p class="error-text">Wrong username or password</p>
+            {{/if}}
+            <Form action="/login" method="POST" >
+                <div class="container">
+                    <div class="column col-6">
+                        <P>
+                            Username:
+                        </P>
+                        <Input type="username" name="username" value="{{this.username}}"></Input>
+                    </div>
+                    <div class="column col-6">
+                        <p>
+                            Password:
+                        </p>
+                        <Input type="password" name="password"></Input>
+                    </div>
+                    <div class="column col-6">
+                        <Input type="submit" name="Login" value="Login"></Input>
+                    </div>
+                </div>
+            </Form>
+        {{/if}}
+    </div>
+</div>

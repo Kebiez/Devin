@@ -1,0 +1,59 @@
+<div class="marginOnSides border">
+    <div>
+        <h1 class="title">
+            {{blogposts.title}}
+        </h1>
+    </div>
+    <div class="container round-corners content-design">
+        <div class="columns">
+            <div class="column col-3">
+                <img src="/static/tempPic.png" alt="Picture" class="roundImage imagePosition">
+            </div>
+            <div class="column col-9">
+                {{blogposts.mainContent}}
+            </div>
+            <div>
+                {{blogposts.date}}
+            </div>
+        </div>
+    </div>
+    <div class="button-margin">
+        {{#if session.isLoggedIn}}
+            <div class="edit-delete-buttons">
+                <a href="/blogs-page/blog-post/{{blogposts.id}}/edit-blog" class="btn btn-primary round-corners">Edit Blog</a>
+                <a href="/blogs-page/blog-post/{{blogposts.id}}/delete-blog" class="btn btn-primary round-corners">Delete Blog</a>
+            </div>
+        {{/if}}
+        <div>
+            <a href="/blogs-page/blog-post/{{blogposts.id}}/comment" class="btn btn-primary round-corners">Comment</a>
+        </div>
+    </div>
+    <div>
+        {{#if comments.length}}
+        {{#each comments}}
+            <div class="content-design round-corners comments-spacing">
+                <div>
+                    {{commentContent}}
+                </div>
+                <div>
+                    {{date}}
+                </div>
+                {{#if ../session.isLoggedIn}}
+                    <div>
+                        <form action="/blogs-page/blog-post/{{blogID}}/delete-comment/{{id}}" method="post">
+                            <input type="submit" value="Delete Comment" class="btn btn-primary round-corners button-margin">
+                        </form>
+                        <form action="/blogs-page/blog-post/{{blogID}}/edit-comment/{{id}}" method="get">
+                            <input type="submit" value="Edit Comment" class="btn btn-primary round-corners button-margin">
+                        </form>
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}}
+        {{else}}
+            <div>
+                There are no comments yet.
+            </div>
+        {{/if}}
+    </div>
+</div>

@@ -1,0 +1,171 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.roundImage{
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    padding: 20px;
+}
+
+.title{
+    text-align: center;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+}
+
+.footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.edit-delete-buttons{
+    padding-top: 16px;
+    padding-bottom: 4px;
+}
+
+.marginOnSides{
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.loginBorder{
+    border-style: double;
+}
+
+.cardSpacing{
+    justify-content: space-between;
+    width: 100%;
+}
+
+.error-text{
+    color: red;
+    text-decoration: underline;
+}
+
+.cardBackground{
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+    min-width: 200px;
+    min-height: 220px;
+}
+
+.cardContent{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.imagePosition{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.blogsDisplaySetting{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projectPosition{
+    display: flex;
+    justify-content: center;
+}
+
+.projectCardBackground{
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.menuButtonPlacement{
+    padding: 20px;
+}
+
+.iconColor{
+    color: antiquewhite;
+}
+
+.border{
+    border-style: solid;
+}
+
+.menuBackground{
+    background-color: gray;
+}
+
+#contactBorder{
+    border-style: dashed;
+}
+
+#navBarArrow{
+    font-size: 30px;
+}
+
+.button-margin{
+    margin: 5px;
+}
+
+.round-corners{
+    border-radius: 25px;
+}
+
+.content-design{
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 10px;
+}
+
+.comments-spacing{
+    margin: 5px;
+}
+
+body{
+    background-color: #B1B1B1;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav { padding-top: 15px; }
+    .sidenav a { font-size: 18px; }
+}

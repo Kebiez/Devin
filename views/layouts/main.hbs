@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Devin</title>
+        <link rel="stylesheet" href="/static/spectre.min.css">
+        <link rel="stylesheet" href="/static/spectre-exp.min.css">
+        <link rel="stylesheet" href="/static/spectre-icons.min.css">
+        <link rel="stylesheet" href="/static/layout.css">
+        <script>
+            function openNav(){
+                document.getElementById("mySideNav").style.width = "250px";
+            }
+            function closeNav(){
+                document.getElementById("mySideNav").style.width = "0";
+            }
+        </script>
+    </head>
+    <header>
+        <div id="mySideNav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="/static/tempPic.png" alt="Avatar" class="roundImage">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/blogs-page">Blogs</a>
+            <a href="/projects-page">Projects</a>
+            {{#if session.isLoggedIn}}
+            <a href="/login">Logout</a>
+            <a href="/create-blog">Create Blog Post</a>
+            <a href="/create-project">Create Project Post</a>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </div>
+        <div class="menuButtonPlacement">
+        <label class="title">Menu</label><br><button class="btn btn-action s-circle menuBackground" onclick="openNav()"><i class="icon icon-menu iconColor"></i></button>
+        </div>
+    </header>
+    <body>
+        {{{body}}}
+        <div class="footer">
+            Made by Kevin Karlsson
+        </div>
+    </body>
+</html>

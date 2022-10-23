@@ -1,0 +1,14 @@
+<div class="marginOnSides">
+    <div class="border">
+        <div class="title">
+            Deleting {{projectposts.title}}
+        </div>
+        <div>
+            Are you sure you want to delete this projectpost?
+        </div>
+        <form action="/projects-page/project-post/{{projectposts.id}}/delete-project" method="POST">
+            <input type="submit" name="yes" value="Yes">
+            <input type="submit" name="no" value="No">
+        </form>
+    </div>
+</div>

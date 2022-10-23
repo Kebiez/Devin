@@ -1,0 +1,22 @@
+<div class="marginOnSides">
+    <div class="title">
+        Editing {{projectposts.title}}
+    </div>
+    <div>
+        {{#if validationErrors.length}}
+        {{#each validationErrors}}
+            <p class="error-text">{{this}}</p>
+        {{/each}}
+        {{/if}}
+        <form action="/projects-page/project-post/{{projectposts.id}}/edit-project" method="POST" class="form">
+            <label>Title</label>
+            <input type="text" name="title" value="{{projectposts.title}}"><br>
+            <label>Description</label>
+            <textarea rows="2" cols="60" type="text" name="description">{{projectposts.description}}</textarea><br>
+            <label>Main Content</label>
+            <textarea rows="5" cols="60" type="text" name="mainContent">{{projectposts.mainContent}}</textarea><br>
+            <input type="date" name="date" value="{{projectposts.date}}">
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="marginOnSides">
+    <div>
+        <h1 class="title">
+            Create Blog Post
+        </h1>
+    </div>
+    {{#if validationErrors.length}}
+    {{#each validationErrors}}
+        <p class="error-text">{{this}}</p>
+    {{/each}}
+    {{/if}}
+    <form action="/create-blog" method="POST" class="form">
+        <label>Title</label>
+        <input type="text" name="title" value="{{this.title}}"><br>
+        <label>Description</label>
+        <textarea rows="2" cols="60" type="text" name="description">{{this.description}}</textarea><br>
+        <label>Main Content</label>
+        <textarea rows="5" cols="60" type="text" name="mainContent">{{this.mainContent}}</textarea><br>
+        <input type="date" name="date" value="{{this.date}}">
+        <input type="submit" value="Create">
+    </form>
+</div>

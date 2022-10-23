@@ -1,0 +1,33 @@
+<div class="marginOnSides">
+    <div>
+        <h1 class="title">
+            Blogs
+        </h1>
+    </div>
+    <div class="container blogsDisplaySetting">
+        <div class="columns cardSpacing">
+            {{#if blogposts.length}}
+            {{#each blogposts}}
+            <div class="column col-3 cardBackground">
+                <div>
+                    <Img src="/static/tempPic.png" class="roundImage imagePosition"></Img>
+                </div>
+                <div>
+                    <h4 class="cardTitle title">
+                        {{title}}
+                    </h4>
+                </div>
+                <div class="cardContent">
+                        {{description}}
+                </div>
+                <div class="cardButton">
+                    <a href="/blogs-page/blog-post/{{id}}" class="btn btn-primary round-corners">Check out this post</a>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <p>There is no posts made yet.</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

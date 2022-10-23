@@ -1,0 +1,23 @@
+<div class="marginOnSides border">
+    <div class="title">
+        {{projectposts.title}}
+    </div>
+    <div class="container round-corners content-design">
+        <div class="columns">
+            <div class="column col 8">
+                {{projectposts.mainContent}}
+            </div>
+            <div class="column col 4">
+                <img src="/static/tempPic.png" alt="" class="roundImage">
+            </div>
+        </div>
+    </div>
+    <div class="button-margin">
+        {{#if session.isLoggedIn}}
+            <div class="edit-delete-buttons">
+                <a href="/projects-page/project-post/{{projectposts.id}}/edit-project" class="btn btn-primary round-corners">Edit Project</a>
+                <a href="/projects-page/project-post/{{projectposts.id}}/delete-project" class="btn btn-primary round-corners">Delete Project</a>
+            </div>
+        {{/if}}
+    </div>
+</div>
